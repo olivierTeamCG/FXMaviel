@@ -1,0 +1,40 @@
+/* fiche prescription */
+
+#planteprescriptionjingfang_set-group,
+#planteprescriptionzangfuqui_set-group{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin:0 10px;
+}
+
+.field-plante select{
+    width: 200px;
+}
+
+
+/* fiche plante */
+#plante_form .form-row{
+    display: inline-block;
+    width: 45%;
+    /*border:0;*/
+}
+
+#plante_form .form-row+.field-famille_plante div{
+    display: inline-block;
+}
+
+
+
+#plante_form .form-row:nth-child(3){
+     width: 100%;
+}
+
+#plante_form .form-row:nth-child(6){
+    vertical-align: top;
+}
+
+#add_id_famille_plante{
+    display: none;
+}
+

@@ -1,0 +1,48 @@
+[
+  {
+    "model": "myDB.FamillePlante",
+    "pk": 1,
+    "fields": {
+      "famille_plante": "T+ZF"
+    }
+  },
+  {
+    "model": "myDB.FamillePlante",
+    "pk": 2,
+    "fields": {
+      "famille_plante": "T+SH"
+    }
+  },{
+    "model": "myDB.FamillePlante",
+    "pk": 3,
+    "fields": {
+      "famille_plante": "+M"
+    }
+  },
+  {
+    "model": "myDB.FamillePlante",
+    "pk": 4,
+    "fields": {
+      "famille_plante": "S+"
+    }
+  },{
+    "model": "myDB.FamillePlante",
+    "pk": 5,
+    "fields": {
+      "famille_plante": "S-"
+    }
+  },
+  {
+    "model": "myDB.FamillePlante",
+    "pk": 6,
+    "fields": {
+      "famille_plante": "T-"
+    }
+  },{
+    "model": "myDB.FamillePlante",
+    "pk": 7,
+    "fields": {
+      "famille_plante": "J-"
+    }
+  }
+]
