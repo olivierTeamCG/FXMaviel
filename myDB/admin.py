@@ -20,9 +20,6 @@ class CSSAdminMixin(object):
 
 
 
-
-
-
 #class PathologiePreparationAdminInline(admin.TabularInline):
 #    model = PathologiePreparation
     

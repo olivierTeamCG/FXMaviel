@@ -1,19 +1,7 @@
-{% include "base.html" %}
-    {% load static %}
-    {% block title %}
-    Nouveau Contact
-    {% endblock %}
+{% extends 'base.html' %}
 
-    {% block navtitle %}
-        Nouveau Contact
-    {% endblock %}
+{% load crispy_forms_tags %}
 
-    {% block content%}
-        <form action="contacts" method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">
-            Sauvegarder
-        </button>
-        </form>
-    {% endblock %}
+{% block content %}
+  {% crispy form %}
+{% endblock %}

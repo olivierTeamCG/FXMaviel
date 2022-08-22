@@ -1,0 +1,7 @@
+﻿[{"model": "myDB.familleplante", "pk": 1, "fields": {"famille_plante": "T+ZF"}},
+ {"model": "myDB.familleplante", "pk": 2, "fields": {"famille_plante": "T+SH"}},
+ {"model": "myDB.familleplante", "pk": 3, "fields": {"famille_plante": "+M"}},
+ {"model": "myDB.familleplante", "pk": 4, "fields": {"famille_plante": "S+"}},
+ {"model": "myDB.familleplante", "pk": 5, "fields": {"famille_plante": "S-"}},
+ {"model": "myDB.familleplante", "pk": 6, "fields": {"famille_plante": "T-"}},
+ {"model": "myDB.familleplante", "pk": 7, "fields": {"famille_plante": "J-"}}]
