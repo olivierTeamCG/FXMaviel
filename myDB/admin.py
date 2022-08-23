@@ -84,13 +84,13 @@ class PrescriptionAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     inlines = (PlantePrescriptionJINGFANGAdminInline,PlantePrescriptionZangfuQuiAdminInline,)
     search_fields = ['symptomes']
     list_display = ('syndrome','symptomes','systeme')
-    #list_filter = ['symptomes', 'systeme']
+    list_filter = ['systeme']
 
 
 class DiagnosticAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     search_fields = ['symptomes_explications']
     list_display = ('syndrome_principal','syndrome')
-    #list_filter = ['symptomes', 'systeme']
+    #list_filter = ['systeme']
 
 
 class ContactAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
