@@ -93,6 +93,9 @@ class DiagnosticAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     #list_filter = ['symptomes', 'systeme']
 
 
+class ContactAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    list_display = ('nom','prenom')
+
 
 admin.site.register(Plante, PlanteAdmin)
 
@@ -107,7 +110,7 @@ admin.site.register(Prescription, PrescriptionAdmin)
 #admin.site.register(PlanteFamillePlante,PlanteFamillePlanteAdmin)
 
 
-admin.site.register(Contact)
+admin.site.register(Contact,ContactAdmin)
 
 admin.site.register(Diagnostic,DiagnosticAdmin)
 

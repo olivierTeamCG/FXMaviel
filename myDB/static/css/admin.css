@@ -38,11 +38,46 @@
     display: none;
 }
 
-*[id^='id__mef']{
-    display: none;
+
+/* contact : masquer les champs de mise en forme */
+*[id^='id__mef'],
+.form-row+.field-_mef3,
+.form-row+.field-_mef18,
+.form-row+.field-_mef31,
+.form-row+.field-_mef41,
+.form-row+.field-_mef52,
+.form-row+.field-_mef64,
+.form-row+.field-_mef76{
+    display: none!important;
+}
+
+.form-row+.field-_mef2,
+.form-row+.field-_mef17,
+.form-row+.field-_mef30,
+.form-row+.field-_mef40,
+.form-row+.field-_mef51,
+.form-row+.field-_mef63,
+.form-row+.field-_mef75{
+    border-top:solid 1px lightgray;
 }
 
 *[for^='id__mef']{
     font-weight: bold;
+    width: 100%!important;
+}
+*[for^='id__mef43'],
+*[for^='id__mef44'],
+*[for^='id__mef45'],
+*[for^='id__mef46'],
+*[for^='id__mef47'],
+*[for^='id__mef75']{
+    font-weight: normal;
 }
 
+.form-row{
+    border: 0;
+}
+
+*[id^='id_Commentaires_']{
+    width: 95%;
+}

@@ -69,7 +69,7 @@ class PlantePrescriptionZangfuQui(models.Model):
 
 class FamillePlante(models.Model):
     default_auto_field = 'django.db.models.AutoField'
-    famille_plante = models.CharField(max_length=5)
+    famille_plante = models.CharField(max_length=30)
 
     def __str__(self):
         return str(self.famille_plante)
