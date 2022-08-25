@@ -47,7 +47,8 @@
 .form-row+.field-_mef41,
 .form-row+.field-_mef52,
 .form-row+.field-_mef64,
-.form-row+.field-_mef76{
+.form-row+.field-_mef76,
+.form-row+.field-_mef85{
     display: none!important;
 }
 
@@ -57,7 +58,8 @@
 .form-row+.field-_mef40,
 .form-row+.field-_mef51,
 .form-row+.field-_mef63,
-.form-row+.field-_mef75{
+.form-row+.field-_mef75,
+.form-row+.field-_mef84{
     border-top:solid 1px lightgray;
 }
 

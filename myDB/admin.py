@@ -88,7 +88,7 @@ class PrescriptionAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
 
 
 class DiagnosticAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
-    search_fields = ['symptomes_explications']
+    search_fields = ['symptomes_explications','syndrome_principal','syndrome','plantes']
     list_display = ('syndrome_principal','syndrome')
     #list_filter = ['systeme']
 

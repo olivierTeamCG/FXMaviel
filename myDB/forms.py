@@ -17,6 +17,25 @@ class Contact(models.Model):
     ville =models.CharField(max_length=200, null=True, verbose_name="VILLE")
     recommande_par =models.CharField(blank=True, max_length=200, null=True, verbose_name="RECOMMANDÉ PAR")
 
+    _mef84=models.CharField(blank=True, max_length=200, null=True, verbose_name="Questionnaire EMOTIONS")
+    _mef85=models.CharField(blank=True, max_length=200, null=True, verbose_name="Mettez une X quand la réponse est nettement OUI, avec commentaires si nécessaire dans la case « COMMENTAIRES »")
+    _mef86=models.CharField(blank=True, max_length=200, null=True, verbose_name="AVEZ-VOUS TENDANCE À...")
+    etre_SOUCIEUX_ANXIEUX=models.BooleanField(default=False,verbose_name="être SOUCIEUX, ANXIEUX ?")
+    etre_TRISTE=models.BooleanField(default=False,verbose_name="être TRISTE ? ")
+    avoir_PEUR=models.BooleanField(default=False,verbose_name="avoir PEUR ? ")
+    etre_EXAGEREMENT_JOYEUX_ou_TRISTE=models.BooleanField(default=False,verbose_name="être EXAGÉRÉMENT JOYEUX ou TRISTE ?")
+    etre_en_COLERE=models.BooleanField(default=False,verbose_name="être en COLÈRE ?")
+    Commentaires_f8_1=models.CharField(blank=True, max_length=1000, null=True, verbose_name="Commentaires : ")
+    _mef92=models.CharField(blank=True, max_length=200, null=True, verbose_name="ACTUELLEMENT")
+    etes_vous_en_conflit_affectif=models.BooleanField(default=False,verbose_name="Êtes-vous en conflit affectif avec, conjoint, enfants, parents ?")
+    etes_vous_en_deuil=models.BooleanField(default=False,verbose_name="Êtes-vous en deuil ?")
+    etes_vous_en_tension_dans_votre_sphere=models.BooleanField(default=False,verbose_name="Êtes-vous en tension dans votre sphère professionnelle ?")
+    etes_vous_en_procedure_judiciaire=models.BooleanField(default=False,verbose_name="Êtes-vous en procédure judiciaire ?")
+    Commentaires_f8_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+
+    
+
+
     _mef2 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Questionnaire n°1")
     _mef3 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Mettez une X quand la réponse est nettement OUI, avec commentaires si nécessaire dans la case « COMMENTAIRES » appropriée.")
     _mef4 =models.CharField(blank=True, max_length=200, null=True, verbose_name="TRANSPIRATION (ou peau moite cela est équivalent en médecine chinoise)")
