@@ -15,6 +15,9 @@ class CSSAdminMixin(object):
         css = {
             'all': ('css/admin.css',),
         }
+        js = (
+            '/static/js/jsPerso.js',
+        ) 
 
 
 

@@ -1,7 +1,13 @@
 /* masquer header django */
 .admin-interface #header{
-    display:none;
+    /* display:none; */
 }
+
+/* masquer les boutons import-export
+.export_link,
+.import_link{
+    display: none!important;
+}*/
 
 
 /* fiche prescription */
