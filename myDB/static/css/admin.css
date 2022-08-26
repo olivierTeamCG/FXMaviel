@@ -1,3 +1,9 @@
+/* masquer header django */
+.admin-interface #header{
+    display:none;
+}
+
+
 /* fiche prescription */
 
 #planteprescriptionjingfang_set-group,
