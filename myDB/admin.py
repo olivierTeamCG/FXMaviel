@@ -60,7 +60,7 @@ class PlanteAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
         return ", ".join([p.famille_plante for p in obj.famille_plante.all()])
 
 
-class FamillePlanteAdmin(ImportExportMixin,admin.ModelAdmin):
+class FamillePlanteAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     model = FamillePlante
     
 
