@@ -82,7 +82,7 @@ class PlantePrescriptionZangfuQuiAdminInline(admin.TabularInline):
 
 class PrescriptionAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     inlines = (PlantePrescriptionJINGFANGAdminInline,PlantePrescriptionZangfuQuiAdminInline,)
-    search_fields = ['symptomes']
+    search_fields = ['symptomes','systeme']
     list_display = ('syndrome','symptomes','systeme')
     list_filter = ['systeme']
 
