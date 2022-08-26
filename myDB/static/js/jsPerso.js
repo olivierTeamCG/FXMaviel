@@ -7,7 +7,7 @@ function monScript() {
     }
     else{
         if(userName != "admin"){
-            document.querySelectorAll('.export_link')[0].remove();
+            document.querySelectorAll('.import_link')[0].remove();
         }
     }
   }
