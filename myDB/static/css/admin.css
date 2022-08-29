@@ -79,6 +79,7 @@
     font-weight: bold;
     width: 100%!important;
 }
+
 *[for^='id__mef43'],
 *[for^='id__mef44'],
 *[for^='id__mef45'],
@@ -94,4 +95,35 @@
 
 *[id^='id_Commentaires_']{
     width: 95%;
+}
+
+#id_Traitement_1,
+#id_Traitement_2,
+#id_Traitement_3,
+#id_Traitement_4,
+#id_Operation_1,
+#id_Operation_2,
+#id_Operation_3,
+#id_Motif_1,
+#id_Motif_2,
+#id_Motif_3,
+*[for^='id_Traitement_1'],
+*[for^='id_Traitement_2'],
+*[for^='id_Traitement_3'],
+*[for^='id_Traitement_4'],
+*[for^='id_Operation_1'],
+*[for^='id_Operation_2'],
+*[for^='id_Operation_3'],
+*[for^='id_Motif_1'],
+*[for^='id_Motif_2'],
+*[for^='id_Motif_3'],
+*[id^='id_M1'],
+*[id^='id_M2'],
+*[id^='id_M3'],
+*[for^='id_M1'],
+*[for^='id_M2'],
+*[for^='id_M3'],
+#id_Medecin,
+*[for^='id_Medecin']{
+    width: 80%!important;
 }
