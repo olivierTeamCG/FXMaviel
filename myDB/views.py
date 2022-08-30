@@ -612,7 +612,7 @@ class ContactForm(ModelForm):
                         'Urinez_vous_souvent_abondamment_et_de_c',
                         'Commentaires_f7_1',),
         )
-        self.fields['nom'].help_text = "Please select bla bla bla"
+        
 
         self.helper.add_input(Submit('submit', 'Submit')) 
         #self.fields['nom'].label = "NOM"
