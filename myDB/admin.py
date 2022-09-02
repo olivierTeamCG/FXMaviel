@@ -50,6 +50,7 @@ class PlanteAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     #inlines = (PlanteFamillePlanteAdminInline,)
 
     list_display = ('substance_medicinale', 'action','familles')
+    search_fields = ['saveur','nature','famille_plante__famille_plante']
     #list_filter = ['famille_plante', 'action']
     formfield_overrides = {
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},
