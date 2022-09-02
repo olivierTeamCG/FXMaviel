@@ -657,7 +657,29 @@ class Contact(models.Model):
     Urinez_vous_souvent_abondamment_et_de_c=models.BooleanField(default=False,verbose_name="Urinez-vous souvent, abondamment et de couleur pâle ?")
     Commentaires_f7_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
+    class Meta:
+        abstract = True
+
+
+class ContactFX(Contact):
+    
 
     def __str__(self):
         return '%s %s (%s)' % (self.nom, self.prenom, self.ville)
 
+
+    class Meta:
+        verbose_name = "Contact FX"
+        verbose_name_plural = "Contacts FX"
+
+
+class ContactFrancois(Contact):
+    
+
+    def __str__(self):
+        return '%s %s (%s)' % (self.nom, self.prenom, self.ville)
+
+
+    class Meta:
+        verbose_name = "Contact François"
+        verbose_name_plural = "Contacts François"

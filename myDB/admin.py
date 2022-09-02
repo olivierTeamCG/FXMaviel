@@ -1,7 +1,7 @@
 from django.contrib import admin
 from import_export.admin import ImportExportMixin
 from .models import *
-from .forms import *
+from .forms import ContactFX, ContactFrancois
 
 admin.site.site_header = "Base de donnée FX - Administration"
 admin.site.site_header = "Base de donnée FX - Administration"
@@ -96,7 +96,10 @@ class DiagnosticAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     #list_filter = ['systeme']
 
 
-class ContactAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+class ContactFXAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    list_display = ('nom','prenom')
+
+class ContactFrancoisAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     list_display = ('nom','prenom')
 
 
@@ -113,7 +116,9 @@ admin.site.register(Prescription, PrescriptionAdmin)
 #admin.site.register(PlanteFamillePlante,PlanteFamillePlanteAdmin)
 
 
-admin.site.register(Contact,ContactAdmin)
+admin.site.register(ContactFX,ContactFXAdmin)
+
+admin.site.register(ContactFrancois,ContactFrancoisAdmin)
 
 admin.site.register(Diagnostic,DiagnosticAdmin)
 
