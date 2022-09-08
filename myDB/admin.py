@@ -91,17 +91,54 @@ class PrescriptionAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     list_filter = ['systeme']
 
 
+
+
+
+##################################################
+##############  Symptome        ##################
+##################################################
+
+class SymptomeCauseAdminInline(admin.TabularInline):
+    model = SymptomeCause
+    extra=0
+
+
+class SymptomeAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    inlines = (SymptomeCauseAdminInline,)
+
+    list_display = ('symptome_name',)
+    #search_fields = ['saveur','nature','famille_plante__famille_plante']
+    #list_filter = ['famille_plante', 'action']
+    #formfield_overrides = {
+    #    models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+    #}
+
+
+admin.site.register(Symptome,SymptomeAdmin)
+
+##################################################
+##############  Diagnostic      ##################
+##################################################
+
+
 class DiagnosticAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     search_fields = ['symptomes_explications','syndrome_principal','syndrome','plantes']
     list_display = ('syndrome_principal','syndrome')
     #list_filter = ['systeme']
 
 
+##################################################
+##############  Contacts        ##################
+##################################################
+
 class ContactFXAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     list_display = ('nom','prenom')
 
 class ContactFrancoisAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     list_display = ('nom','prenom')
+
+
+
 
 
 admin.site.register(Plante, PlanteAdmin)
@@ -122,6 +159,9 @@ admin.site.register(ContactFX,ContactFXAdmin)
 admin.site.register(ContactFrancois,ContactFrancoisAdmin)
 
 admin.site.register(Diagnostic,DiagnosticAdmin)
+
+
+
 
 
 

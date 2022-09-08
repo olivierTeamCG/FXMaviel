@@ -51,6 +51,12 @@
 }
 
 
+/* fiche symptomes */
+.vLargeTextField{
+    width: 100%;
+}
+
+
 /* contact : masquer les champs de mise en forme */
 *[id^='id__mef'],
 .form-row+.field-_mef3,
