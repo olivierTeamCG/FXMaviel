@@ -140,20 +140,24 @@ class Diagnostic(models.Model):
         return str(self.syndrome)
 
 
-class Symptome(models.Model):
+class Pathologie(models.Model):
     default_auto_field = 'django.db.models.AutoField'
-    symptome_name = models.CharField(max_length=200,verbose_name="symptome", null=True,blank="")
+    pathologie_name = models.CharField(max_length=200,verbose_name="Pathologie", null=True,blank="")
 
+    class Meta:
+        verbose_name = ("Pathologie")
 
-class SymptomeCause(models.Model):
+class PathologieSymptome(models.Model):
     default_auto_field = 'django.db.models.AutoField'
-    symptome = models.ForeignKey('Symptome', on_delete=models.CASCADE)
+    patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
+    symptome = models.CharField(max_length=2000,verbose_name="Symptome", null=True,blank="")
+    principe_therapeutique = models.CharField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
     explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
     traitement_acu = models.TextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
     traitement_pharma = models.TextField(max_length=2000,verbose_name="Traitement pharmacopée", null=True,blank=True)
 
     class Meta:
-        verbose_name = ("Cause")
+        verbose_name = ("Symptome")
 
         
 

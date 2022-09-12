@@ -51,14 +51,20 @@
 }
 
 
-/* fiche symptomes */
-.vLargeTextField{
-    width: 90%;
-}
+/* fiche pathologie */
+.field-symptome,
+.field-principe_therapeutique,
 .field-explications,
 .field-traitement_acu,
 .field-traitement_pharma{
-    vertical-align: top!important;
+    display: inline-block;
+    width: 45%;
+}
+.field-explications{
+    width: 100%;
+}
+.vLargeTextField{
+    width: 95%!important;
 }
 
 
