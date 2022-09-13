@@ -147,6 +147,9 @@ class Pathologie(models.Model):
     class Meta:
         verbose_name = ("Pathologie")
 
+    def __str__(self):
+        return str(self.pathologie_name)
+
 class PathologieSymptome(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
@@ -158,6 +161,9 @@ class PathologieSymptome(models.Model):
 
     class Meta:
         verbose_name = ("Symptome")
+
+    def __str__(self):
+        return str(self.symptome)
 
         
 
