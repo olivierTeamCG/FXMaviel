@@ -52,7 +52,7 @@
 
 
 /* fiche pathologie */
-.field-symptome,
+.field-cause,
 .field-principe_therapeutique,
 .field-explications,
 .field-traitement_acu,
@@ -63,8 +63,12 @@
 .field-explications{
     width: 100%;
 }
-.vLargeTextField{
+.vLargeTextField, .vTextField{
     width: 95%!important;
+}
+.field-symptome{
+    width: 45%;
+    float: right;
 }
 
 

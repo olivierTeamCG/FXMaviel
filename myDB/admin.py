@@ -98,16 +98,16 @@ class PrescriptionAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
 ##############  Pathologie      ##################
 ##################################################
 
-class PathologieSymptomeAdminInline(admin.StackedInline):
-    model = PathologieSymptome
+class PathologieCauseAdminInline(admin.StackedInline):
+    model = PathologieCause
     extra=0
 
 
 class PathologieAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
-    inlines = (PathologieSymptomeAdminInline,)
+    inlines = (PathologieCauseAdminInline,)
 
     list_display = ('pathologie_name',)
-    search_fields = ['pathologie_name','PathologieSymptome__explications','PathologieSymptome__symptome','PathologieSymptome__principe_therapeutique']
+    search_fields = ['pathologie_name','PathologieCause__explications','PathologieCause__symptome','PathologieCause__principe_therapeutique']
     #list_filter = ['famille_plante', 'action']
     #formfield_overrides = {
     #    models.ManyToManyField: {'widget': CheckboxSelectMultiple},
