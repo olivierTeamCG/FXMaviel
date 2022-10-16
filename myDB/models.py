@@ -24,7 +24,7 @@ class Prescription(models.Model):
     syndrome = models.CharField(max_length=200,default='')
     systeme = models.CharField(max_length=200,default='')
     symptomes = models.TextField(max_length=2000,default='')
-    remarques = models.TextField(max_length=2000,default='',verbose_name='Effets thérapeutiques')
+    remarques = models.TextField(max_length=2000,default='',verbose_name='Effets thérapeutiques', null=True,blank=True)
 
     def __str__(self):
         return self.syndrome
@@ -34,7 +34,8 @@ class PlantePrescriptionJINGFANG(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     plante = models.ForeignKey('Plante', on_delete=models.CASCADE)
     Prescription = models.ForeignKey('Prescription', on_delete=models.CASCADE)
-    quantite = models.IntegerField(default=1)
+    #quantite = models.IntegerField(default=1)
+    quantite = models.CharField(max_length=10, null=True,blank=True)
 
     class Meta:
         verbose_name = ("Jing Fang Zhang Zhong Jing")
@@ -45,7 +46,8 @@ class PlantePrescriptionZangfuQui(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     plante = models.ForeignKey('Plante', on_delete=models.CASCADE)
     Prescription = models.ForeignKey('Prescription', on_delete=models.CASCADE)
-    quantite = models.IntegerField(default=1)
+    #quantite = models.IntegerField(default=1)
+    quantite = models.CharField(max_length=10, null=True,blank=True)
 
     class Meta:
         verbose_name = ("Jing Fang Feng Shi Lun")
@@ -100,7 +102,8 @@ class Plante(models.Model):
     prudence_medicamenteuse = models.TextField(max_length=2000,verbose_name="Prudence médicamenteuse", null=True,blank=True)
     contre_indications_medicamenteuses = models.TextField(max_length=2000,verbose_name="Contre-indications médicamenteuses", null=True,blank=True)
 
-    
+    #class Meta:
+    #    ordering = ('substance_medicinale',)
     
 
     def __str__(self):
