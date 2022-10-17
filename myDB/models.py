@@ -102,10 +102,10 @@ class Plante(models.Model):
     prudence_medicamenteuse = models.TextField(max_length=2000,verbose_name="Prudence médicamenteuse", null=True,blank=True)
     contre_indications_medicamenteuses = models.TextField(max_length=2000,verbose_name="Contre-indications médicamenteuses", null=True,blank=True)
 
-    #class Meta:
-    #    ordering = ('substance_medicinale',)
     
-
+    class Meta:
+        ordering = ['substance_medicinale'] 
+    
     def __str__(self):
         return str(self.substance_medicinale)
 
