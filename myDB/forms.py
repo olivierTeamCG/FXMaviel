@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.db import models
 
 
+
 class Contact(models.Model):
     _mef1 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Questionnaire général")
     nom =models.CharField(max_length=200, null=True, verbose_name="NOM")
@@ -90,13 +91,13 @@ class Contact(models.Model):
     avoir_PEUR=models.BooleanField(default=False,verbose_name="avoir PEUR ? ")
     etre_EXAGEREMENT_JOYEUX_ou_TRISTE=models.BooleanField(default=False,verbose_name="être EXAGÉRÉMENT JOYEUX ou TRISTE ?")
     etre_en_COLERE=models.BooleanField(default=False,verbose_name="être en COLÈRE ?")
-    Commentaires_f8_1=models.CharField(blank=True, max_length=1000, null=True, verbose_name="Commentaires : ")
+    Commentaires_f8_1=models.TextField(blank=True, max_length=1000, null=True, verbose_name="Commentaires : ")
     _mef92=models.CharField(blank=True, max_length=200, null=True, verbose_name="ACTUELLEMENT")
     etes_vous_en_conflit_affectif=models.BooleanField(default=False,verbose_name="Êtes-vous en conflit affectif avec, conjoint, enfants, parents ?")
     etes_vous_en_deuil=models.BooleanField(default=False,verbose_name="Êtes-vous en deuil ?")
     etes_vous_en_tension_dans_votre_sphere=models.BooleanField(default=False,verbose_name="Êtes-vous en tension dans votre sphère professionnelle ?")
     etes_vous_en_procedure_judiciaire=models.BooleanField(default=False,verbose_name="Êtes-vous en procédure judiciaire ?")
-    Commentaires_f8_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f8_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     
 
@@ -115,7 +116,7 @@ class Contact(models.Model):
     Transpirez_vous_des_mains_et_ou_des_pied=models.BooleanField(default=False,verbose_name="Transpirez_vous des mains et/ou des pieds, sans cesse ?")
     Transpirez_vous_la_nuit=models.BooleanField(default=False,verbose_name="Transpirez_vous la nuit ?")
     Transpirez_vous_du_visage=models.BooleanField(default=False,verbose_name="Transpirez_vous du visage ?")
-    Commentaires_f1_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     _mef5 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Vos sensations par rapport au TEMPS QUIL FAIT")
     _mef6 =models.CharField(blank=True, max_length=200, null=True, verbose_name="LES COURANTS D'AIR / LE VENT")
@@ -138,7 +139,7 @@ class Contact(models.Model):
     Craignez_vous_le_chaud=models.BooleanField(default=False,verbose_name="Craignez_vous le chaud ?")
     Aimez_vous_le_chaud=models.BooleanField(default=False,verbose_name="Aimez_vous le chaud ?")
     Le_chaud_vous_est_il_indifferent=models.BooleanField(default=False,verbose_name="Le chaud vous est_il indifférent ?")
-    Commentaires_f1_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef10 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Vos sensations corporelles de CHALEUR et de FROID")
     _mef11 =models.CharField(blank=True, max_length=200, null=True, verbose_name="SENSATION DE FROID")
@@ -173,7 +174,7 @@ class Contact(models.Model):
     Vous_avez_chaud_quand_il_fait_chaud_et=models.BooleanField(default=False,verbose_name="Vous avez chaud quand il fait chaud, et avez froid quand il fait froid")
     Vous_avez_ces_sensations_le_jour=models.BooleanField(default=False,verbose_name="Vous avez ces sensations le jour ")
     Vous_avez_ces_sensations_la_nuit=models.BooleanField(default=False,verbose_name="Vous avez ces sensations la nuit")
-    Commentaires_f1_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef14bis =models.CharField(blank=True, max_length=200, null=True, verbose_name="Avez_vous une sensation de SÈCHERESSE : ")
     Dans_la_bouche_la_langue=models.BooleanField(default=False,verbose_name="Dans la bouche, la langue")
@@ -181,7 +182,7 @@ class Contact(models.Model):
     Sur_les_levres=models.BooleanField(default=False,verbose_name="Sur les lèvres")
     Dans_le_nez=models.BooleanField(default=False,verbose_name="Dans le nez")
     Dans_les_yeux=models.BooleanField(default=False,verbose_name="Dans les yeux")
-    Commentaires_f1_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef15 =models.CharField(blank=True, max_length=200, null=True, verbose_name="FIEVRE")
     Quelle_est_votre_temperature_corporelle_jour=models.BooleanField(default=False,verbose_name="Quelle est votre température corporelle habituelle le jour ? ")
@@ -191,7 +192,7 @@ class Contact(models.Model):
     Le_jour=models.BooleanField(default=False,verbose_name="Le jour ?")
     Dans_lapres_midi=models.BooleanField(default=False,verbose_name="Dans laprès_midi ?")
     Combien=models.BooleanField(default=False,verbose_name="Combien ?")
-    Commentaires_f1_5=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_5=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef16 =models.CharField(blank=True, max_length=200, null=True, verbose_name="SOIF")
     Vous_avez_soif=models.BooleanField(default=False,verbose_name="Vous avez soif")
@@ -201,7 +202,7 @@ class Contact(models.Model):
     Vous_buvez_chaud=models.BooleanField(default=False,verbose_name="Vous buvez chaud")
     Vous_buvez_froid=models.BooleanField(default=False,verbose_name="Vous buvez froid")
     Vous_vous_forcez_de_boire_15l_deau_par=models.BooleanField(default=False,verbose_name="Vous vous forcez de boire 1,5l deau par jour parce que vous pensez que cest bon pour votre organisme")
-    Commentaires_f1_6=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f1_6=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
 
 
@@ -231,7 +232,7 @@ class Contact(models.Model):
     Les_yeux=models.BooleanField(default=False,verbose_name="Les yeux ?")
     Le_nez=models.BooleanField(default=False,verbose_name="Le nez ?")
     la_bouche=models.BooleanField(default=False,verbose_name="la bouche ?")
-    Commentaires_f2_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef21 =models.CharField(blank=True, max_length=200, null=True, verbose_name="CE QUI CALME VOS DOULEUR : ")
     calme_douleur_La_nuit=models.BooleanField(default=False,verbose_name="La nuit ?")
@@ -240,7 +241,7 @@ class Contact(models.Model):
     calme_douleur_Le_froid=models.BooleanField(default=False,verbose_name="Le froid ?")
     calme_douleur_Le_mouvement=models.BooleanField(default=False,verbose_name="Le mouvement ?")
     calme_douleur_La_pression_le_massage=models.BooleanField(default=False,verbose_name="La pression, le massage ?")
-    Commentaires_f2_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef22 =models.CharField(blank=True, max_length=200, null=True, verbose_name="CE QUI AUGMENTE VOS DOULEUR : ")
     augmente_douleur_La_nuit=models.BooleanField(default=False,verbose_name="La nuit ?")
@@ -249,18 +250,18 @@ class Contact(models.Model):
     augmente_douleur_Le_froid=models.BooleanField(default=False,verbose_name="Le froid ?")
     augmente_douleur_Le_mouvement=models.BooleanField(default=False,verbose_name="Le mouvement ?")
     augmente_douleur_La_pression_le_massage=models.BooleanField(default=False,verbose_name="La pression, le massage ?")
-    Commentaires_f2_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef23 =models.CharField(blank=True, max_length=200, null=True, verbose_name="L’ETATS DES VOS ARTICULATIONS ACTUELLEMENT :")
     Les_articulations_douloureuses_sont_froi=models.BooleanField(default=False,verbose_name="Les articulations douloureuses sont froides")
     Les_articulations_douloureuses_sont_chau=models.BooleanField(default=False,verbose_name="Les articulations douloureuses sont chaudes")
     Les_articulations_douloureuses_sont_roug=models.BooleanField(default=False,verbose_name="Les articulations douloureuses sont rouges")
     Les_articulations_douloureuses_sont_enfl=models.BooleanField(default=False,verbose_name="Les articulations douloureuses sont enflées")
-    Commentaires_f2_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef24 =models.CharField(blank=True, max_length=200, null=True, verbose_name="CARACTERISTIQUES DE VOS DOULEURS :")
     _mef25 =models.CharField(blank=True, max_length=200, null=True, verbose_name="voir et remplir le questionnaire spécifique (Q7) pour bien décrire vos douleurs")
-    Commentaires_f2_5=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_5=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef26 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Vos sensations au niveau de LA PEAU")
     Certaines_parties_de_votre_peau_vous_dem=models.BooleanField(default=False,verbose_name="Certaines parties de votre peau vous démangent-elles ?")
@@ -270,7 +271,7 @@ class Contact(models.Model):
     La_ou_cela_vous_demange_y_a_t_il_des_cl=models.BooleanField(default=False,verbose_name="Là où cela vous démange, y a-t-il des cloques avec un liquide clair ?")
     La_ou_cela_vous_demange_y_a_t_il_des_cl=models.BooleanField(default=False,verbose_name="Là où cela vous démange, y a-t-il des cloques avec un liquide coloré ?")
     La_ou_cela_vous_demange_cela_suinte_t_i=models.BooleanField(default=False,verbose_name="Là où cela vous démange, cela suinte-t-il ?")
-    Commentaires_f2_6=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_6=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef27 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Vos sensations au niveau des MUSCLES")
     Avez_vous_des_tics_des_tremblements=models.BooleanField(default=False,verbose_name="Avez-vous des tics, des tremblements ?")
@@ -281,7 +282,7 @@ class Contact(models.Model):
     Avez_vous_des_myalgies_douleur_dans_les=models.BooleanField(default=False,verbose_name="Avez-vous des myalgies (douleur dans les muscles) ?")
     Le_jour=models.BooleanField(default=False,verbose_name="Le jour ?")
     La_nuit=models.BooleanField(default=False,verbose_name="La nuit ?")
-    Commentaires_f2_7=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_7=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef28 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Au niveau de la TÊTE")
     Avez_vous_des_vertiges=models.BooleanField(default=False,verbose_name="Avez-vous des vertiges ?")
@@ -293,14 +294,14 @@ class Contact(models.Model):
     Avez_vous_des_mucosites_gorge_nez_bou=models.BooleanField(default=False,verbose_name="Avez-vous des mucosités (gorge, nez, bouche, palais) ?")
     Avez_vous_des_eternuements=models.BooleanField(default=False,verbose_name="Avez-vous des éternuements ?")
     Avez_vous_perdu_lodorat=models.BooleanField(default=False,verbose_name="Avez-vous perdu l’odorat ?")
-    Commentaires_f2_8=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_8=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef29 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Sensation dans la BOUCHE")
     Avez_vous_dans_la_bouche_un_gout_amer=models.BooleanField(default=False,verbose_name="Avez-vous dans la bouche un goût amer ?")
     Avez_vous_dans_la_bouche_un_gout_metalli=models.BooleanField(default=False,verbose_name="Avez-vous dans la bouche un goût métallique ?")
     Avez_vous_dans_la_bouche_un_autre_gout_a=models.BooleanField(default=False,verbose_name="Avez-vous dans la bouche un autre goût anormal ?")
     Avez_vous_perdu_le_gout=models.BooleanField(default=False,verbose_name="Avez-vous perdu le goût")
-    Commentaires_f2_9=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f2_9=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef30 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Questionnaire n°3")
     _mef31 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Mettez une X quand la réponse est nettement OUI, avec commentaires si nécessaire dans la case « COMMENTAIRES » appropriée")
@@ -314,7 +315,7 @@ class Contact(models.Model):
     Ressentez_vous_une_oppression_au_niveau=models.BooleanField(default=False,verbose_name="Ressentez-vous une oppression au niveau des régions thoraciques latérales ?")
     Avez_vous_des_palpitations_cardiaques=models.BooleanField(default=False,verbose_name="Avez-vous des palpitations cardiaques ?")
     Combien_de_pulsations_cardiaques_avez_vo=models.BooleanField(default=False,verbose_name="Combien de pulsations cardiaques avez-vous en une minute, au repos ?")
-    Commentaires_f3_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f3_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef34 =models.CharField(blank=True, max_length=200, null=True, verbose_name="ABDOMEN")
     _mef35 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Pour les questions concernant l’abdomen, donnez le maximum de précisions dans les commentaires")
@@ -328,7 +329,7 @@ class Contact(models.Model):
     Avez_vous_la_partie_abdominale_en_dessou=models.BooleanField(default=False,verbose_name="Avez-vous la partie abdominale en dessous du nombril, gonflée ?")
     Avez_vous_des_gaz=models.BooleanField(default=False,verbose_name="Avez-vous des gaz ?")
     Avez_vous_des_borborygmes=models.BooleanField(default=False,verbose_name="Avez-vous des borborygmes ?")
-    Commentaires_f3_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f3_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef36 =models.CharField(blank=True, max_length=200, null=True, verbose_name="URINES")
     _mef37 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Pour les questions concernant les urines, donnez le maximum de précisions dans les commentaires")
@@ -343,7 +344,7 @@ class Contact(models.Model):
     Vos_urines_sont_elles_difficiles_a_evacu=models.BooleanField(default=False,verbose_name="Vos urines sont-elles difficiles à évacuer ?")
     Urinez_vous_la_nuit=models.BooleanField(default=False,verbose_name="Urinez-vous la nuit ?")
     Combien_de_fois_la_nuit=models.BooleanField(default=False,verbose_name="Combien de fois la nuit ?")
-    Commentaires_f3_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f3_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
    
     _mef38 =models.CharField(blank=True, max_length=200, null=True, verbose_name="SELLES")
     _mef39 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Pour les questions concernant les selles, donnez le maximum de précisions dans les commentaires")
@@ -362,7 +363,7 @@ class Contact(models.Model):
     Vos_selles_sont_elles_abondantes=models.BooleanField(default=False,verbose_name="Vos selles sont-elles abondantes ?")
     Vos_selles_sont_elles_peu_abondantes=models.BooleanField(default=False,verbose_name="Vos selles sont-elles peu abondantes ?")
     Il_y_a_du_sang_dans_vos_selles=models.BooleanField(default=False,verbose_name="Il y a du sang dans vos selles ?")
-    Commentaires_f3_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f3_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
 
     _mef40 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Questionnaire n°4")
@@ -378,7 +379,7 @@ class Contact(models.Model):
     _mef46 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Trouble caractérisé par des rêves ou des cauchemars qui perturbent le sommeil et qui empêchent un repos réparateur Ceci a pour conséquence de produire des étourdissements et de la lassitude dans la journée")
     Faites_vous_des_cauchemars=models.BooleanField(default=False,verbose_name="Faites-vous des cauchemars ?")
     _mef47 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Rêve éprouvant, effrayant ou angoissant qui agite le sommeil ou qui provoque le réveil Ils doivent être fréquent et perturbant")
-    Commentaires_f4_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f4_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     _mef48 =models.CharField(blank=True, max_length=200, null=True, verbose_name="LA FATIGUE")
     Vous_sentez_vous_fatigue_en_ce_moment=models.BooleanField(default=False,verbose_name="Vous sentez-vous fatigué en ce moment ? ")
@@ -387,7 +388,7 @@ class Contact(models.Model):
     Vous_sentez_vous_tres_souvent_epuise_au=models.BooleanField(default=False,verbose_name="Vous sentez-vous très souvent épuisé, au point de devoir dormir ? ")
     Avez_vous_des_coups_de_barre_A_quelles=models.BooleanField(default=False,verbose_name="Avez-vous des coups de barre ? A quelles heures ?")
     Votre_fatigue_ou_la_situez_vous=models.BooleanField(default=False,verbose_name="Votre fatigue, où la situez-vous ?")
-    Commentaires_f4_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f4_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     _mef49 =models.CharField(blank=True, max_length=200, null=True, verbose_name="ÊTES-VOUS DES ALLERGIES : ")
     A_des_medicaments=models.BooleanField(default=False,verbose_name="A des médicaments ?")
@@ -398,7 +399,7 @@ class Contact(models.Model):
     Lesquels=models.BooleanField(default=False,verbose_name="Lesquels ?")
     De_contact=models.BooleanField(default=False,verbose_name="De contact ?")
     Lesquels=models.BooleanField(default=False,verbose_name="Lesquels ?")
-    Commentaires_f4_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f4_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     _mef50 =models.CharField(blank=True, max_length=200, null=True, verbose_name="AVEZ-VOUS DES ADDICTIONS")
     Tabac=models.BooleanField(default=False,verbose_name="Tabac ?")
@@ -409,7 +410,7 @@ class Contact(models.Model):
     Sucre=models.BooleanField(default=False,verbose_name="Sucré ?")
     Sale=models.BooleanField(default=False,verbose_name="Salé ?")
     Sodas=models.BooleanField(default=False,verbose_name="Sodas ?")
-    Commentaires_f4_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f4_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef51 =models.CharField(blank=True, max_length=200, null=True, verbose_name="n°5 - GYNECOLOGIE")
     _mef52 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Mettez une X quand la réponse est nettement OUI, avec commentaires si nécessaire dans la case « COMMENTAIRES » appropriée")
@@ -427,20 +428,20 @@ class Contact(models.Model):
     Votre_cycle_est_il_toujours_court_moins=models.BooleanField(default=False,verbose_name="Votre cycle est-il toujours court (moins de 28 jours) ? ")
     Votre_cycle_est_toujours_long_plus_de_2=models.BooleanField(default=False,verbose_name="Votre cycle est toujours long (plus de 29 jours) ?")
     Votre_cycle_est_il_quelques_fois_court_e=models.BooleanField(default=False,verbose_name="Votre cycle est-il quelques fois court et quelques fois long ?")
-    Commentaires_f5_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef54 =models.CharField(blank=True, max_length=200, null=True, verbose_name="La DURÉE de vos règles")
     Vos_regles_durent_elles_7_jours_et_plus=models.BooleanField(default=False,verbose_name="Vos règles durent-elles 7 jours et plus ?                                                           (du tout début à la toute fin des saignements)")
     Vos_regles_durent_elles_au_maximum_3_jou=models.BooleanField(default=False,verbose_name="Vos règles durent-elles au maximum 3 jours ?                                                       (du tout début à la toute fin des saignements) ")
     Vos_regles_durent_elles_entre_4_a_6_jour=models.BooleanField(default=False,verbose_name="Vos règles durent-elles entre 4 à 6 jours ?                                                             (du tout début à la toute fin des saignements) ?")
-    Commentaires_f5_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef55 =models.CharField(blank=True, max_length=200, null=True, verbose_name="La QUANTITÉ de sang écoulé")
     Vos_regles_sont_elles_hemorragiques=models.BooleanField(default=False,verbose_name="Vos règles sont-elles hémorragiques ?")
     Vos_regles_sont_elles_abondantes=models.BooleanField(default=False,verbose_name="Vos règles sont-elles abondantes ?")
     Vos_regles_sont_elles_peu_abondantes=models.BooleanField(default=False,verbose_name="Vos règles sont-elles peu abondantes ?")
     La_quantite_de_sang_vous_semble_t_elle_n=models.BooleanField(default=False,verbose_name="La quantité de sang vous semble-t-elle normales ?")
-    Commentaires_f5_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef56 =models.CharField(blank=True, max_length=200, null=True, verbose_name="La COULEUR du sang")
     Votre_sang_est_il_sombre=models.BooleanField(default=False,verbose_name="Votre sang est-il sombre ?")
@@ -448,14 +449,14 @@ class Contact(models.Model):
     Votre_sang_est_il_rouge_vif=models.BooleanField(default=False,verbose_name="Votre sang est-il rouge vif ?")
     Votre_sang_est_il_rose_pâle=models.BooleanField(default=False,verbose_name="Votre sang est-il rose pâle ?")
     Votre_sang_est_il_tres_clair=models.BooleanField(default=False,verbose_name="Votre sang est-il très clair ?")
-    Commentaires_f5_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef57 =models.CharField(blank=True, max_length=200, null=True, verbose_name="L’ASPECT du sang")
     Avez_vous_des_caillots_dans_vos_regles=models.BooleanField(default=False,verbose_name="Avez-vous des caillots dans vos règles ?")
     Votre_sang_est_il_epais=models.BooleanField(default=False,verbose_name="Votre sang est-il épais ?")
     Votre_sang_est_il_collant_gluant=models.BooleanField(default=False,verbose_name="Votre sang est-il collant, gluant ?")
     Votre_sang_est_il_tres_liquide_tres_flu=models.BooleanField(default=False,verbose_name="Votre sang est-il très liquide, très fluide ?")
-    Commentaires_f5_5=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_5=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef58 =models.CharField(blank=True, max_length=200, null=True, verbose_name="La DOULEUR")
     Avez_vous_des_douleurs_liees_aux_regles=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs liées aux règles ?")
@@ -463,14 +464,14 @@ class Contact(models.Model):
     Avez_vous_des_douleurs_PENDANT_les_regle=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs PENDANT les règles ?")
     Avez_vous_des_douleurs_APReS_les_regles=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs APRÈS les règles ?")
     Avez_vous_des_douleurs_au_moment_de_lov=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs au moment de l’ovulation ? ")
-    Commentaires_f5_6=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_6=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef59 =models.CharField(blank=True, max_length=200, null=True, verbose_name="LOCALISATION DE LA DOULEUR ")
     Avez_vous_des_MAUX_DE_TeTE=models.BooleanField(default=False,verbose_name="Avez-vous des MAUX DE TÊTE ?")
     Avez_vous_des_douleurs_aux_SEINS=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs aux SEINS ?")
     Avez_vous_des_douleurs_au_VENTRE=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs au VENTRE ?")
     Avez_vous_des_douleurs_au_BAS_DU_DOS=models.BooleanField(default=False,verbose_name="Avez-vous des douleurs au BAS DU DOS ?")
-    Commentaires_f5_7=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_7=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef60 =models.CharField(blank=True, max_length=200, null=True, verbose_name="DESCRIPTION DE LA DOULEUR")
     Vos_douleurs_sont_elles_sourdes=models.BooleanField(default=False,verbose_name="Vos douleurs sont-elles sourdes ?")
@@ -478,13 +479,13 @@ class Contact(models.Model):
     Vos_douleurs_ressemblent_elles_a_une_pre=models.BooleanField(default=False,verbose_name="Vos douleurs ressemblent-elles à une pression, un gonflement douloureux ?")
     Avez_vous_une_sensation_de_froid_dans_le=models.BooleanField(default=False,verbose_name="Avez-vous une sensation de froid dans le petit bassin améliorée par la chaleur ?")
     Apres_les_regles_etes_vous_fatiguee=models.BooleanField(default=False,verbose_name="Après les règles êtes-vous fatiguée ?")
-    Commentaires_f5_8=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_8=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef61 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Comment les traitez-vous ? ")
     Par_de_la_chaleur_bouillotte_ou_autre=models.BooleanField(default=False,verbose_name="Par de la chaleur (bouillotte ou autre)")
     Par_des_medicaments=models.BooleanField(default=False,verbose_name="Par des médicaments")
     Vous_ne_faites_rien_et_attendez_que_cela=models.BooleanField(default=False,verbose_name="Vous ne faites rien et attendez que cela passe")
-    Commentaires_f5_9=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_9=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef62 =models.CharField(blank=True, max_length=200, null=True, verbose_name="AUTRES CAS")
     Avez_vous_des_hemorragies_uterine_en_DEH=models.BooleanField(default=False,verbose_name="Avez-vous des hémorragies utérine en DEHORS des règles ?")
@@ -496,7 +497,7 @@ class Contact(models.Model):
     Sont_elles_striees_de_sang=models.BooleanField(default=False,verbose_name="Sont-elles striées de sang ?")
     Avez_vous_des_mycoses=models.BooleanField(default=False,verbose_name="Avez-vous des mycoses ?")
     Avez_vous_des_infections=models.BooleanField(default=False,verbose_name="Avez-vous des infections ?")
-    Commentaires_f5_10=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f5_10=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef63 =models.CharField(blank=True, max_length=200, null=True, verbose_name="n°6 - DIGESTION -")
     _mef64 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Mettez une X quand la réponse est nettement OUI, avec commentaires si nécessaire dans la case « COMMENTAIRES » appropriée")
@@ -515,7 +516,7 @@ class Contact(models.Model):
     Avez_vous_les_levres_pâles=models.BooleanField(default=False,verbose_name="• Avez-vous les lèvres pâles ?")
     Avez_vous_la_tete_lourde=models.BooleanField(default=False,verbose_name="• Avez-vous la tête lourde ?")
     Avez_vous_le_sentiment_davoir_perdu_l=models.BooleanField(default=False,verbose_name="• Avez-vous le sentiment d’avoir perdu le goût des aliments ?")
-    Commentaires_f6_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     _mef66 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Pi Yang Qi Xu =2X (+ 4X du Pi Qi Xu)")
     Craignez_vous_le_froid_ou_avez_vous_le=models.BooleanField(default=False,verbose_name="• Craignez-vous le froid ou avez-vous le nez et les mains froids ?")
@@ -523,7 +524,7 @@ class Contact(models.Model):
     Avez_vous_les_selles_liquides_et_peu_o=models.BooleanField(default=False,verbose_name="• Avez-vous les selles liquides et peu odorantes ou du sang dans les selles ? ")
     Avez_vous_le_teint_pale_ou_la_langue_p=models.BooleanField(default=False,verbose_name="• Avez-vous le teint pâle ou la langue pâle ?")
     Souffrez_vous_doedemes=models.BooleanField(default=False,verbose_name="• Souffrez-vous d’oedèmes ?")
-    Commentaires_f6_2=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_2=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef67 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Dysharmonie Gan / Pi =3X (+ 4X du Pi Qi Xu)")
     Souffrez_vous_de_sensation_de_douleur=models.BooleanField(default=False,verbose_name="• Souffrez-vous de sensation de douleur et/ou de gonflement et/ou d’oppression sur au moins l’une des zones suivantes : poitrine, hypochondre, abdomen, petit bassin ?")
@@ -533,7 +534,7 @@ class Contact(models.Model):
     Souffrez_vous_dun_etat_depressif=models.BooleanField(default=False,verbose_name="• Souffrez-vous d’un état dépressif ?")
     Avez_vous_un_syndrome_premenstruel=models.BooleanField(default=False,verbose_name="• Avez-vous un syndrome prémenstruel ?")
     Souffrez_vous_dune_colopathie_fonctio=models.BooleanField(default=False,verbose_name="• Souffrez-vous d’une colopathie fonctionnelle ?")
-    Commentaires_f6_3=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_3=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef68 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Dysfonctionnement Wei =3X ")
     Souffrez_vous_de_douleurs_a_lestomac=models.BooleanField(default=False,verbose_name="• Souffrez-vous de douleurs à l’estomac ?")
@@ -543,7 +544,7 @@ class Contact(models.Model):
     Vomissez_vous_parfois=models.BooleanField(default=False,verbose_name="• Vomissez-vous parfois ?")
     Avez_vous_parfois_des_nausees=models.BooleanField(default=False,verbose_name="• Avez-vous parfois des nausées ?")
     Avez_vous_des_borborygmes_bruits_au=models.BooleanField(default=False,verbose_name="• Avez-vous des borborygmes (bruits) au niveau de l’estomac ?")
-    Commentaires_f6_4=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_4=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef69 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Stagnation aliments dans Wei =2X (+ 3X du dysfonctionnement Wei)")
     Avez_vous_un_degout_pour_la_nourriture=models.BooleanField(default=False,verbose_name="• Avez-vous un dégoût pour la nourriture ?")
@@ -552,7 +553,7 @@ class Contact(models.Model):
     Avez_vous_des_vomissements_daliments=models.BooleanField(default=False,verbose_name="• Avez-vous des vomissements d’aliments non digérés ?")
     Avez_vous_une_digestion_tres_lourde_et=models.BooleanField(default=False,verbose_name="• Avez-vous une digestion très lourde et longue ?")
     Est_ce_que_lenduit_de_votre_langue_a=models.BooleanField(default=False,verbose_name="• Est-ce que l’enduit de votre langue a un aspect gras, sale, trouble ?")
-    Commentaires_f6_5=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_5=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef70 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Wei Re =2X (+ 3X du dysfonctionnement Wei)")
     Avez_vous_souvent_faim_et_un_fort_appe=models.BooleanField(default=False,verbose_name="• Avez-vous souvent faim et un fort appétit ?")
@@ -562,7 +563,7 @@ class Contact(models.Model):
     Etes_vous_constipe=models.BooleanField(default=False,verbose_name="• Etes-vous constipé ?")
     Souffrez_vous_de_sensations_de_brulure=models.BooleanField(default=False,verbose_name="• Souffrez-vous de sensations de brulures dans l’estomac ?")
     Souffrez_vous_de_gingivite=models.BooleanField(default=False,verbose_name="• Souffrez-vous de gingivite ?")
-    Commentaires_f6_6=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_6=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef71 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Wei Yin Xu =2/3X (+ 3X du dysfonctionnement Wei)")
     Avez_vous_faim_sans_desir_de_manger=models.BooleanField(default=False,verbose_name="• Avez-vous faim sans désir de manger ?")
@@ -572,14 +573,14 @@ class Contact(models.Model):
     Avez_vous_les_selles_seches=models.BooleanField(default=False,verbose_name="• Avez-vous les selles sèches ?")
     Avez_vous_la_langue_et_la_gorge_seche=models.BooleanField(default=False,verbose_name="• Avez-vous la langue et la gorge sèche ?")
     Souffrez_vous_de_transpiration_nocturn=models.BooleanField(default=False,verbose_name="• Souffrez-vous de transpiration nocturne ?")
-    Commentaires_f6_7=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_7=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef72 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Wei Han =2X (+ 3X du dysfonctionnement Wei)")
     Avez_vous_une_sensation_de_froid_dans=models.BooleanField(default=False,verbose_name="• Avez-vous une sensation de froid dans l’estomac ?")
     Avez_vous_une_douleur_de_lestomac_acc=models.BooleanField(default=False,verbose_name="• Avez-vous une douleur de l’estomac accompagnée de sensation de distension, de froid et de plénitude ?")
     Cette_douleur_est_elle_aggravee_par_le=models.BooleanField(default=False,verbose_name="• Cette douleur est-elle aggravée par le froid et améliorée par la chaleur ?")
     Souffrez_vous_de_vomissements_de_liqui=models.BooleanField(default=False,verbose_name="• Souffrez-vous de vomissements de liquides clairs ?")
-    Commentaires_f6_8=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_8=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef73 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Dysharmonie Gan / Wei =3X (+ 3X du dysfonctionnement Wei)")
     Avez_vous_une_distension_et_une_douleu=models.BooleanField(default=False,verbose_name="• Avez-vous une distension et une douleur de l’estomac avec élancement vers les hypocondres ?")
@@ -587,7 +588,7 @@ class Contact(models.Model):
     Avez_vous_des_eructations_et_hoquets_f=models.BooleanField(default=False,verbose_name="• Avez-vous des éructations et hoquets fréquents ?")
     Souffrez_vous_dune_sensation_de_gene=models.BooleanField(default=False,verbose_name="• Souffrez-vous d’une sensation de gène, de malaise, de faim dans l’estomac ?")
     Est_ce_que_vos_troubles_digestifs_sont=models.BooleanField(default=False,verbose_name="• Est-ce que vos troubles digestifs sont aggravés par les émotions et le stress ?")
-    Commentaires_f6_9=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f6_9=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
     
     _mef74 =models.CharField(blank=True, max_length=200, null=True, verbose_name="n°7 - Bi - DOULEURS ARTICULAIRES -")
     _mef75 =models.CharField(blank=True, max_length=200, null=True, verbose_name="Ce questionnaire devrait permettre un bon diagnostic de vos douleurs                                                                          Diagnostic indispensable à un traitement personnalisé et adapté à VOUS           Pour cela, vous devrez analyser le type de douleur que vous avez en répondant à l’ensemble de toutes les questions                                Ne cherchez pas de cohérence dans vos réponses                               Répondez à chaque question, non avec votre intellect, en fonction de ce que vous pensez, mais par la réponse que donne votre CORPS à la question posée                                                                                       Il est très fréquent, pour ne pas dire constant, que l’on remplisse plusieurs paragraphes                                                                Ne cherchez pas à être cohérent dans vos réponses                                                                                              Encore une fois dites ce que votre corps vous dit                                 A la fin du questionnaire vous pourrez ajouter des commentaires qui vous paraissent nécessaire ")
@@ -655,7 +656,7 @@ class Contact(models.Model):
     Etes_vous_fatigue=models.BooleanField(default=False,verbose_name="Etes-vous fatigué ?")
     Avez_vous_des_selles_molles=models.BooleanField(default=False,verbose_name="Avez-vous des selles molles ?")
     Urinez_vous_souvent_abondamment_et_de_c=models.BooleanField(default=False,verbose_name="Urinez-vous souvent, abondamment et de couleur pâle ?")
-    Commentaires_f7_1=models.CharField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
+    Commentaires_f7_1=models.TextField(blank=True, max_length=1000, null=True,verbose_name="Commentaires : ")
 
     class Meta:
         abstract = True
