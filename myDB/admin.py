@@ -107,7 +107,8 @@ class PathologieAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     inlines = (PathologieCauseAdminInline,)
 
     list_display = ('pathologie_name',)
-    search_fields = ['pathologie_name','PathologieCause__explications','PathologieCause__symptome','PathologieCause__principe_therapeutique']
+    search_fields = ['pathologie_name','pathologiecause__explications','pathologiecause__symptome','pathologiecause__principe_therapeutique']
+    #search_fields = ['pathologie_name','pathologiecause__symptome']
     #list_filter = ['famille_plante', 'action']
     #formfield_overrides = {
     #    models.ManyToManyField: {'widget': CheckboxSelectMultiple},
