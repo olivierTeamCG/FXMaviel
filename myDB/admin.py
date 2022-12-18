@@ -106,6 +106,7 @@ class PathologieCauseAdminInline(admin.StackedInline):
 class PathologieAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     inlines = (PathologieCauseAdminInline,)
 
+
     list_display = ('pathologie_name',)
     search_fields = ['pathologie_name','pathologiecause__explications','pathologiecause__symptome','pathologiecause__principe_therapeutique']
     #search_fields = ['pathologie_name','pathologiecause__symptome']
@@ -113,6 +114,12 @@ class PathologieAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     #formfield_overrides = {
     #    models.ManyToManyField: {'widget': CheckboxSelectMultiple},
     #}
+
+    def get_readonly_fields(self, request, obj=None):
+        if 'edit' not in request.GET:
+            return self.readonly_fields
+        else:
+            return self.readonly_fields
 
 
 admin.site.register(Pathologie,PathologieAdmin)

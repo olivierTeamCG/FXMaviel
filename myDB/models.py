@@ -8,6 +8,8 @@ from django.forms.models import ModelForm
 from django.forms.widgets import CheckboxSelectMultiple
 from .widgets import Widget
 
+from ckeditor.fields import RichTextField
+
 
 
 #class Molecule(models.Model):
@@ -157,11 +159,14 @@ class PathologieCause(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
     cause = models.CharField(max_length=2000,verbose_name="Cause", null=True,blank="")
-    symptome = models.TextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
+    symptome = RichTextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
     principe_therapeutique = models.CharField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
-    explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
-    traitement_acu = models.TextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
-    traitement_pharma = models.TextField(max_length=2000,verbose_name="Traitement pharmacopée", null=True,blank=True)
+    #explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
+    explications = RichTextField(verbose_name="Explications", null=True,blank=True)
+    traitement_acu = RichTextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
+    traitement_pharma = RichTextField(max_length=2000,verbose_name="Traitement pharmacopée", null=True,blank=True)
+    explications_acu = RichTextField(verbose_name="Explications", null=True,blank=True)
+    explications_pharma = RichTextField(verbose_name="Explications", null=True,blank=True)
 
     class Meta:
         verbose_name = ("Cause")

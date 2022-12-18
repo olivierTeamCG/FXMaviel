@@ -52,29 +52,17 @@
 
 
 /* fiche pathologie */
-
-
 .field-cause,
 .field-principe_therapeutique,
 .field-explications,
-.field-explications_acu,
-.field-explications_pharma,
 .field-traitement_acu,
 .field-traitement_pharma{
-    /*display: inline-block;
-    width: 45%;*/
+    display: inline-block;
+    width: 45%;
 }
-
-.aligned label{
-    float:unset;
+.field-explications{
+    width: 100%;
 }
-
-.form-row {
-  width: 45%;
-  display: inline-block;
-}
-
-
 .vLargeTextField, .vTextField{
     width: 95%!important;
 }
@@ -82,14 +70,6 @@
     width: 45%;
     float: right;
 }
-
-
-/* CKEditor */
-/*.cke_contents {
-  height: 100px !important;
-}*/
-
-
 
 
 /* contact : masquer les champs de mise en forme */
