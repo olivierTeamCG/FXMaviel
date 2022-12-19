@@ -159,8 +159,8 @@ class PathologieCause(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
     cause = models.CharField(max_length=2000,verbose_name="Cause", null=True,blank="")
-    symptome = RichTextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
     principe_therapeutique = models.CharField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
+    symptome = RichTextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
     #explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
     explications = RichTextField(verbose_name="Explications", null=True,blank=True)
     traitement_acu = RichTextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
