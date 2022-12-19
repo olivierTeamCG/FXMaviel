@@ -54,15 +54,17 @@
 /* fiche pathologie */
 
 
-.field-cause,
-.field-principe_therapeutique,
+
 .field-explications,
 .field-explications_acu,
 .field-explications_pharma,
 .field-traitement_acu,
-.field-traitement_pharma{
+.field-traitement_pharma,
+.field-symptome{
     /*display: inline-block;
     width: 45%;*/
+    /*height: 400px !important;
+    overflow-y: scroll;*/
 }
 
 .aligned label{
@@ -77,10 +79,6 @@
 
 .vLargeTextField, .vTextField{
     width: 95%!important;
-}
-.field-symptome{
-    width: 45%;
-    float: right;
 }
 
 
