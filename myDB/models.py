@@ -233,7 +233,7 @@ class Point(models.Model):
 
     def image_tag(self):
         if self.image:
-            return format_html('<a href="/media/%s" target="_blank"><img src="/media/%s" width="200" height="150" /></a>' % (self.image,self.image))
+            return format_html('<a href="/media/%s" target="_blank"><img src="/media/%s" height="150" /></a>' % (self.image,self.image))
         return "-"
     image_tag.description = 'image'
     image_tag.short_description = 'schéma'
