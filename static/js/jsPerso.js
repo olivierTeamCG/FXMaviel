@@ -10,6 +10,13 @@ function monScript() {
             document.querySelectorAll('.import_link')[0].remove();
         }
     }
+
+    alert("coucou");
+    if(document.querySelectorAll('.field-image_tag')){
+      document.querySelectorAll('.field-image')[0].innerHTML += document.querySelectorAll('.field-image_tag')[0].innerHTML;
+    }
+
+
   }
   
   if (document.readyState === 'complete') {

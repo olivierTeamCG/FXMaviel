@@ -10,6 +10,13 @@ function monScript() {
             document.querySelectorAll('.import_link')[0].remove();
         }
     }
+
+    if(document.querySelectorAll('.field-image')[0] && document.querySelectorAll('.field-image_tag')[0]){
+      document.querySelectorAll('.field-image')[0].innerHTML += document.querySelectorAll('.field-image_tag')[0].innerHTML;
+	  document.querySelectorAll('.field-image_tag')[0].innerHTML = "";
+    }
+
+
   }
   
   if (document.readyState === 'complete') {

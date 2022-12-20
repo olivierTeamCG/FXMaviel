@@ -87,7 +87,10 @@
   height: 100px !important;
 }*/
 
-
+/* POINTS ZONES GRANDES ZONES */
+.field-image{
+    display: block;
+}
 
 
 /* contact : masquer les champs de mise en forme */

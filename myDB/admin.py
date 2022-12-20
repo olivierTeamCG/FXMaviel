@@ -171,9 +171,27 @@ admin.site.register(Diagnostic,DiagnosticAdmin)
 
 
 
+#####################################################################
+##############  Grandes zone, zones, points        ##################
+#####################################################################
 
 
 
+class PointGrandeZoneAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    model = PointGrandeZone
 
 
+class PointZoneAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    model = PointZone
+    list_display = ('zone','grandeZone')
 
+
+class PointAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
+    model = Point
+    list_display = ('point','zone','image_tag', 'color1_tag', 'color2_tag')
+    readonly_fields = ['image_tag']
+    
+
+admin.site.register(PointGrandeZone,PointGrandeZoneAdmin)
+admin.site.register(PointZone,PointZoneAdmin)
+admin.site.register(Point,PointAdmin)

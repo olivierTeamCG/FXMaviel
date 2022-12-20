@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings #add this
+from django.conf.urls.static import static #add this
 
 
 urlpatterns = [
