@@ -219,7 +219,7 @@ class Point(models.Model):
     point = models.CharField(max_length=100)
     color1 = ColorField(default='#FFFFFF',verbose_name="couleur 1")
     color2 = ColorField(default='#FFFFFF',verbose_name="couleur 2")
-    image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma")
+    image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma",blank=True)
     #localisationAnatomique = models.CharField(max_length=100)
     maitreTungShenging = models.TextField(max_length=100,verbose_name="Me. Tung Shenging", null=True,blank=True)
     maitreTungIndicationTherapeutique = models.TextField(max_length=2000,verbose_name="Me. Tung Indication Therapeutique", null=True,blank=True)
@@ -233,7 +233,7 @@ class Point(models.Model):
 
     def image_tag(self):
         if self.image:
-            return format_html('<a href="/media/%s" target="_blank"><img src="/media/%s" height="150" /></a>' % (self.image,self.image))
+            return format_html('<a href="/media/%s" target="_blank"><img id="renderImg" src="/media/%s" height="150" /></a>' % (self.image,self.image))
         return "-"
     image_tag.description = 'image'
     image_tag.short_description = 'schéma'
