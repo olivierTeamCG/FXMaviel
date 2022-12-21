@@ -190,6 +190,7 @@ class PointAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     model = Point
     list_display = ('point','zone','image_tag', 'color1_tag', 'color2_tag')
     readonly_fields = ['image_tag']
+    list_filter = ['zone__grandeZone','zone']
     
 
 admin.site.register(PointGrandeZone,PointGrandeZoneAdmin)
