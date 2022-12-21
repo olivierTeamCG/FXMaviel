@@ -202,7 +202,7 @@ class PointGrandeZone(models.Model):
         return str(self.grande_zone)
 
     class Meta:
-        verbose_name = ("TUNG - Grandes zones")
+        verbose_name = ("TUNG - Grandes zone")
 
 class PointZone(models.Model):
     default_auto_field = 'django.db.models.AutoField'
@@ -215,7 +215,7 @@ class PointZone(models.Model):
         return f"{self.grandeZone} - {self.zone}"
 
     class Meta:
-        verbose_name = ("TUNG - Zones")
+        verbose_name = ("TUNG - Zone")
 
 
 class Point(models.Model):
@@ -261,4 +261,4 @@ class Point(models.Model):
     color2_tag.allow_tags = True
 
     class Meta:
-        verbose_name = ("TUNG - Points")
+        verbose_name = ("TUNG - Point")
