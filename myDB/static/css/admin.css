@@ -88,8 +88,19 @@
 }*/
 
 /* POINTS ZONES GRANDES ZONES */
-.field-image{
-    display: block;
+.field-maitreTung_zone, .field-maitreTungColor1, .field-maitreTungColor2,
+.field-maitreHu_zone, .field-maitreHuColor1, .field-maitreHuColor2{
+    width: 30%;
+    vertical-align: top;
+}
+div.help{
+    margin-left: 0!important;
+}
+.field-point{
+    vertical-align: top;
+}
+.aligned label{
+    width: unset;
 }
 
 

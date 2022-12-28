@@ -133,15 +133,15 @@ class PlanteForm(ModelForm):
 
 class Diagnostic(models.Model):
     default_auto_field = 'django.db.models.AutoField'   
-    syndrome_principal = models.CharField(max_length=2000,verbose_name="Syndrome principal", null=True,blank="")
-    syndrome = models.TextField(max_length=2000,verbose_name="Syndrome", null=True,blank=True)
-    causes = models.TextField(max_length=5000,verbose_name="Causes", null=True,blank=True)
-    symptomes_explications = models.TextField(max_length=8000,verbose_name="Symptomes", null=True,blank=True)
-    principes_traitements = models.TextField(max_length=2000,verbose_name="Principes de traitements", null=True,blank=True)
+    syndrome_principal = RichTextField(max_length=2000,verbose_name="Syndrome principal", null=True,blank="")
+    syndrome = RichTextField(max_length=2000,verbose_name="Syndrome", null=True,blank=True)
+    causes = RichTextField(max_length=5000,verbose_name="Causes", null=True,blank=True)
+    symptomes_explications = RichTextField(max_length=8000,verbose_name="Symptomes", null=True,blank=True)
+    principes_traitements = RichTextField(max_length=2000,verbose_name="Principes de traitements", null=True,blank=True)
 
-    points_acu = models.TextField(max_length=2000,verbose_name="Points acupuncture", null=True,blank=True)
-    plantes = models.TextField(max_length=2000,verbose_name="Plantes", null=True,blank=True)
-    prescriptions = models.TextField(max_length=2000,verbose_name="Prescriptions", null=True,blank=True)
+    points_acu = RichTextField(max_length=2000,verbose_name="Points acupuncture", null=True,blank=True)
+    plantes = RichTextField(max_length=2000,verbose_name="Plantes", null=True,blank=True)
+    prescriptions = RichTextField(max_length=2000,verbose_name="Prescriptions", null=True,blank=True)
 
 
     def __str__(self):
@@ -161,15 +161,15 @@ class Pathologie(models.Model):
 class PathologieCause(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
-    cause = models.CharField(max_length=2000,verbose_name="Cause", null=True,blank="")
-    principe_therapeutique = models.CharField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
+    cause = RichTextField(max_length=2000,verbose_name="Cause", null=True,blank="")
+    principe_therapeutique = RichTextField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
     explications = RichTextField(verbose_name="Explications", null=True,blank=True)
     symptome = RichTextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
     #explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
     traitement_acu = RichTextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
     traitement_pharma = RichTextField(max_length=2000,verbose_name="Traitement pharmacopée", null=True,blank=True)
-    explications_acu = RichTextField(verbose_name="Explications", null=True,blank=True)
-    explications_pharma = RichTextField(verbose_name="Explications", null=True,blank=True)
+    #explications_acu = RichTextField(verbose_name="Explications", null=True,blank=True)
+    #explications_pharma = RichTextField(verbose_name="Explications", null=True,blank=True)
 
     class Meta:
         verbose_name = ("Cause")
@@ -220,18 +220,21 @@ class PointZone(models.Model):
 
 class Point(models.Model):
     default_auto_field = 'django.db.models.AutoField'
-    zone = models.ForeignKey('PointZone', on_delete=models.CASCADE)
     point = models.CharField(max_length=100)
-    color1 = ColorField(default='#FFFFFF',verbose_name="couleur 1")
-    color2 = ColorField(default='#FFFFFF',verbose_name="couleur 2")
     image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma",blank=True)
+    maitreTung_zone = models.ManyToManyField(PointZone,verbose_name="Me. Tung zone", related_name='maitreTung_zone')
     #localisationAnatomique = models.CharField(max_length=100)
-    maitreTungShenging = models.TextField(max_length=100,verbose_name="Me. Tung Shenging", null=True,blank=True)
-    maitreTungIndicationTherapeutique = models.TextField(max_length=2000,verbose_name="Me. Tung Indication Therapeutique", null=True,blank=True)
-    maitreHuShenging = models.TextField(max_length=100,verbose_name="Dr. HU Shenging", null=True,blank=True)
-    maitreHuIndicationTherapeutique = models.TextField(max_length=2000,verbose_name="Dr. HU Indication Therapeutique", null=True,blank=True)
-    maitreLaiShenging = models.TextField(max_length=100,verbose_name="Dr. Lai Shenging", null=True,blank=True)
-    maitreLaiIndicationTherapeutique = models.TextField(max_length=2000,verbose_name="Dr. Lai Indication Therapeutique", null=True,blank=True)
+    maitreTungColor1 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 1")
+    maitreTungColor2 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 2")
+    maitreTungShenging = RichTextField(max_length=100,verbose_name="Me. Tung Shenging", null=True,blank=True)
+    maitreTungIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Me. Tung Indication Therapeutique", null=True,blank=True)
+    maitreHu_zone = models.ManyToManyField(PointZone,verbose_name="Me. Hu zone", related_name='maitreHu_zone')
+    maitreHuColor1 = ColorField(default='#FFFFFF',verbose_name="Dr. HU couleur 1")
+    maitreHuColor2 = ColorField(default='#FFFFFF',verbose_name="Dr. HU couleur 2")
+    maitreHuShenging = RichTextField(max_length=100,verbose_name="Dr. HU Shenging", null=True,blank=True)
+    maitreHuIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Dr. HU Indication Therapeutique", null=True,blank=True)
+    maitreLaiShenging = RichTextField(max_length=100,verbose_name="Dr. Lai Shenging", null=True,blank=True)
+    maitreLaiIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Dr. Lai Indication Therapeutique", null=True,blank=True)
    
     def __str__(self):
         return str(self.point)
@@ -245,20 +248,35 @@ class Point(models.Model):
     image_tag.allow_tags = True
 
     def color1_tag(self):
-        if self.color1:
-            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.color1)
+        if self.maitreTungColor1:
+            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.maitreTungColor1)
         return "-"
-    color1_tag.description = 'color1'
-    color1_tag.short_description = 'couleur 1'
+    color1_tag.description = 'maitreTungColor1'
+    color1_tag.short_description = 'Me Tung couleur 1'
     color1_tag.allow_tags = True
 
     def color2_tag(self):
-        if self.color2:
-            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.color2)
+        if self.maitreTungColor2:
+            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.maitreTungColor2)
         return "-"
-    color2_tag.description = 'color2'
-    color2_tag.short_description = 'couleur 2'
+    color2_tag.description = 'maitreTungColor2'
+    color2_tag.short_description = 'Me Tung couleur 2'
     color2_tag.allow_tags = True
 
     class Meta:
         verbose_name = ("TUNG - Point")
+
+
+class PointForm(ModelForm):
+
+    class Meta:
+        model = Point
+        fields = ("maitreTung_zone","maitreHu_zone")
+
+    def __init__(self, *args, **kwargs):
+
+        super(PointForm, self).__init__(*args, **kwargs)
+
+        #self.fields["zone_point"].widget = CheckboxSelectMultiple()
+        self.fields["maitreTung_zone"].queryset = Point.objects.all()
+        self.fields["maitreHu_zone"].queryset = Point.objects.all()
