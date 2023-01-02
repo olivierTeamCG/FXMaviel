@@ -120,7 +120,7 @@ class PathologieAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
             return self.readonly_fields
         else:
             return self.readonly_fields
-
+        
 
 admin.site.register(Pathologie,PathologieAdmin)
 
@@ -193,6 +193,7 @@ class PointAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     readonly_fields = ['image_tag']
     list_filter = ['maitreTung_zone','maitreHu_zone',]
     #list_filter = ['maitreHu_zone',]
+
     
 
 admin.site.register(PointGrandeZone,PointGrandeZoneAdmin)

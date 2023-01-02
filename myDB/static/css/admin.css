@@ -97,12 +97,21 @@ div.help{
     margin-left: 0!important;
 }
 .field-point{
-    vertical-align: top;
+    display: block;
 }
 .aligned label{
     width: unset;
 }
-
+.field-localisationAnatomique{
+    vertical-align: top;
+}
+.dynamic-pathologiecause_set>h3{
+    font-size: 20px;
+}
+.field-principe_therapeutique input,
+.field-cause input{
+    font-size: 20px;
+}
 
 /* contact : masquer les champs de mise en forme */
 *[id^='id__mef'],

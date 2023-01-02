@@ -133,15 +133,15 @@ class PlanteForm(ModelForm):
 
 class Diagnostic(models.Model):
     default_auto_field = 'django.db.models.AutoField'   
-    syndrome_principal = RichTextField(max_length=2000,verbose_name="Syndrome principal", null=True,blank="")
-    syndrome = RichTextField(max_length=2000,verbose_name="Syndrome", null=True,blank=True)
+    syndrome_principal = RichTextField(max_length=5000,verbose_name="Syndrome principal", null=True,blank="")
+    syndrome = RichTextField(max_length=5000,verbose_name="Syndrome", null=True,blank=True)
     causes = RichTextField(max_length=5000,verbose_name="Causes", null=True,blank=True)
     symptomes_explications = RichTextField(max_length=8000,verbose_name="Symptomes", null=True,blank=True)
-    principes_traitements = RichTextField(max_length=2000,verbose_name="Principes de traitements", null=True,blank=True)
+    principes_traitements = RichTextField(max_length=5000,verbose_name="Principes de traitements", null=True,blank=True)
 
-    points_acu = RichTextField(max_length=2000,verbose_name="Points acupuncture", null=True,blank=True)
-    plantes = RichTextField(max_length=2000,verbose_name="Plantes", null=True,blank=True)
-    prescriptions = RichTextField(max_length=2000,verbose_name="Prescriptions", null=True,blank=True)
+    points_acu = RichTextField(max_length=5000,verbose_name="Points acupuncture", null=True,blank=True)
+    plantes = RichTextField(max_length=5000,verbose_name="Plantes", null=True,blank=True)
+    prescriptions = RichTextField(max_length=5000,verbose_name="Prescriptions", null=True,blank=True)
 
 
     def __str__(self):
@@ -163,11 +163,11 @@ class PathologieCause(models.Model):
     patho = models.ForeignKey('Pathologie', on_delete=models.CASCADE)
     cause = models.CharField(max_length=2000,verbose_name="Cause", null=True,blank="")
     principe_therapeutique = models.CharField(max_length=2000,verbose_name="Principe therapeutique", null=True,blank="")
-    explications = RichTextField(verbose_name="Explications", null=True,blank=True)
-    symptome = RichTextField(max_length=2000,verbose_name="Symptome", null=True,blank="")
+    explications = RichTextField(max_length=5000,verbose_name="Explications", null=True,blank=True)
+    symptome = RichTextField(max_length=5000,verbose_name="Symptome", null=True,blank="")
     #explications = models.TextField(max_length=2000,verbose_name="Explications", null=True,blank=True)
-    traitement_acu = RichTextField(max_length=2000,verbose_name="Traitement acupuncture", null=True,blank=True)
-    traitement_pharma = RichTextField(max_length=2000,verbose_name="Traitement pharmacopée", null=True,blank=True)
+    traitement_acu = RichTextField(max_length=5000,verbose_name="Traitement acupuncture", null=True,blank=True)
+    traitement_pharma = RichTextField(max_length=5000,verbose_name="Traitement pharmacopée", null=True,blank=True)
     #explications_acu = RichTextField(verbose_name="Explications", null=True,blank=True)
     #explications_pharma = RichTextField(verbose_name="Explications", null=True,blank=True)
 
@@ -221,20 +221,20 @@ class PointZone(models.Model):
 class Point(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     point = models.CharField(max_length=100)
+    localisationAnatomique = RichTextField(max_length=5000, null=True,verbose_name="Localisation",blank=True)
     image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma",blank=True)
     maitreTung_zone = models.ManyToManyField(PointZone,verbose_name="Me. Tung zone", related_name='maitreTung_zone')
-    #localisationAnatomique = models.CharField(max_length=100)
     maitreTungColor1 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 1")
     maitreTungColor2 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 2")
-    maitreTungShenging = RichTextField(max_length=100,verbose_name="Me. Tung Shenging", null=True,blank=True)
-    maitreTungIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Me. Tung Indication Therapeutique", null=True,blank=True)
+    maitreTungShenging = RichTextField(max_length=5000,verbose_name="Me. Tung Shenging", null=True,blank=True)
+    maitreTungIndicationTherapeutique = RichTextField(max_length=5000,verbose_name="Me. Tung Indication Therapeutique", null=True,blank=True)
     maitreHu_zone = models.ManyToManyField(PointZone,verbose_name="Me. Hu zone", related_name='maitreHu_zone')
     maitreHuColor1 = ColorField(default='#FFFFFF',verbose_name="Dr. HU couleur 1")
     maitreHuColor2 = ColorField(default='#FFFFFF',verbose_name="Dr. HU couleur 2")
-    maitreHuShenging = RichTextField(max_length=100,verbose_name="Dr. HU Shenging", null=True,blank=True)
-    maitreHuIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Dr. HU Indication Therapeutique", null=True,blank=True)
-    maitreLaiShenging = RichTextField(max_length=100,verbose_name="Dr. Lai Shenging", null=True,blank=True)
-    maitreLaiIndicationTherapeutique = RichTextField(max_length=2000,verbose_name="Dr. Lai Indication Therapeutique", null=True,blank=True)
+    maitreHuShenging = RichTextField(max_length=5000,verbose_name="Dr. HU Shenging", null=True,blank=True)
+    maitreHuIndicationTherapeutique = RichTextField(max_length=5000,verbose_name="Dr. HU Indication Therapeutique", null=True,blank=True)
+    maitreLaiShenging = RichTextField(max_length=5000,verbose_name="Dr. Lai Shenging", null=True,blank=True)
+    maitreLaiIndicationTherapeutique = RichTextField(max_length=5000,verbose_name="Dr. Lai Indication Therapeutique", null=True,blank=True)
    
     def __str__(self):
         return str(self.point)
