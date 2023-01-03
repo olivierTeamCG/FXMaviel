@@ -222,7 +222,7 @@ class Point(models.Model):
     default_auto_field = 'django.db.models.AutoField'
     point = models.CharField(max_length=100)
     localisationAnatomique = RichTextField(max_length=5000, null=True,verbose_name="Localisation",blank=True)
-    image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma",blank=True)
+    #image = models.ImageField(upload_to='images/', null=True,verbose_name="Schéma",blank=True)
     maitreTung_zone = models.ManyToManyField(PointZone,verbose_name="Me. Tung zone", related_name='maitreTung_zone')
     maitreTungColor1 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 1")
     maitreTungColor2 = ColorField(default='#FFFFFF',verbose_name="Me. Tung couleur 2")
@@ -239,13 +239,13 @@ class Point(models.Model):
     def __str__(self):
         return str(self.point)
 
-    def image_tag(self):
-        if self.image:
-            return format_html('<a href="/media/%s" target="_blank"><img id="renderImg" src="/media/%s" height="150" /></a>' % (self.image,self.image))
-        return "-"
-    image_tag.description = 'image'
-    image_tag.short_description = 'schéma'
-    image_tag.allow_tags = True
+    #def image_tag(self):
+    #    if self.image:
+    #        return format_html('<a href="/media/%s" target="_blank"><img id="renderImg" src="/media/%s" height="150" /></a>' % (self.image,self.image))
+    #    return "-"
+    #image_tag.description = 'image'
+    #image_tag.short_description = 'schéma'
+    #image_tag.allow_tags = True
 
     def color1_tag(self):
         if self.maitreTungColor1:
@@ -262,6 +262,22 @@ class Point(models.Model):
     color2_tag.description = 'maitreTungColor2'
     color2_tag.short_description = 'Me Tung couleur 2'
     color2_tag.allow_tags = True
+
+    def color1_Hu_tag(self):
+        if self.maitreHuColor1:
+            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.maitreHuColor1)
+        return "-"
+    color1_Hu_tag.description = 'maitreHuColor1'
+    color1_Hu_tag.short_description = 'Me Hu couleur 1'
+    color1_Hu_tag.allow_tags = True
+
+    def color2_Hu_tag(self):
+        if self.maitreHuColor2:
+            return format_html('<div style="width:20px;height:20px;background-color:%s"></div>' % self.maitreHuColor2)
+        return "-"
+    color2_Hu_tag.description = 'maitreHuColor2'
+    color2_Hu_tag.short_description = 'Me Hu couleur 2'
+    color2_Hu_tag.allow_tags = True
 
     class Meta:
         verbose_name = ("TUNG - Point")

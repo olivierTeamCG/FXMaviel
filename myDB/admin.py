@@ -188,11 +188,11 @@ class PointZoneAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
 
 class PointAdmin(ImportExportMixin,admin.ModelAdmin,CSSAdminMixin):
     model = Point
-    #list_display = ('point','maitreTung_zone','image_tag', 'color1_tag', 'color2_tag')
-    list_display = ('point','image_tag', 'color1_tag', 'color2_tag')
-    readonly_fields = ['image_tag']
+    #list_display = ('point','image_tag', 'color1_tag', 'color2_tag')
+    list_display = ('point', 'color1_tag', 'color2_tag', 'color1_Hu_tag', 'color2_Hu_tag')
+    #readonly_fields = ['image_tag']
     list_filter = ['maitreTung_zone','maitreHu_zone',]
-    #list_filter = ['maitreHu_zone',]
+    
 
     
 

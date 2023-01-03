@@ -97,7 +97,7 @@ div.help{
     margin-left: 0!important;
 }
 .field-point{
-    display: block;
+    display: inline-block;
 }
 .aligned label{
     width: unset;
